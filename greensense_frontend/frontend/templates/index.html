@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome Home</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"/>
+<style>
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+
+    }
+    input[type=text] {
+    width: 180px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+
+
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 50%;
+}
+
+@font-face {
+    font-family: 'GothamBold';
+    src: url('{% static 'fonts/GothamBold.ttf' %}');
+
+  }
+
+
+    </style>
+</head>
+<body id="bg" style="background-image: url('{% static "images/bg2.jpg"%}')";>
+
+<font face="GothamBold">  <h2 align='middle' style="color:black;">Green Sense<br>the smart solution</h2></font>
+
+  <font face="GothamBold"><p align='middle' style="font-size:15px;color:black;">SELECT Mak-A-Thon 2018<br>Vellore Institute of Technology, Vellore</p>
+
+    <hr>
+
+<div class="middle"></font>
+  <font face="GothamBold"> <p align='middle'>Current Plant Reading <br> {{ read }}</p></font>
+  <br><br><br><br><br><br>
+
+
+
+  <form align='middle' method="post">
+      {% csrf_token %}
+      <!--
+<input type="text" name="Article" placeholder="Type any Article">
+
+<input type="submit" name="ArticleS" value="Article">
+
+
+<input type="text" name="KeyWord" placeholder="KeyWord">
+
+<input type="submit" name="KeyWordS" value="Keyword"> -->
+
+<input type="text" name="Website" placeholder="Enter City">
+
+<input type="submit" name="WebsiteS" value="Get Forecast">
+<br><br>
+<input type="submit" name="upload" value="Upload Picture">
+</form>
+<br><br><br>
+<font face="GothamBold"> <p align='middle'>Current Temperatue @ Chennai {{ output }}</p></font>
+
+<!--<h3>  <a href="{% url 'simple_upload' %}">Upload Picture</a> </h3><br><br> -->
+
+
+
+
+
+    <div style=" position: fixed;
+       text-align: center;
+
+       bottom: 20px;
+       width: 100%;">
+       <img src="{% static 'images/logo.png' %}" height="100px" width="240px" align="middle"/>
+
+    </div>
+  </div>
+</body>
+</html>
