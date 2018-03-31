@@ -2,6 +2,10 @@
 
 {% block content %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"/>
+  <script>
+      alert('{{ message }}');
+  </script>
+
 <h3>  <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <input type="file" name="myfile">
@@ -13,7 +17,7 @@
 
   {% endif %}
 
-
+ <font face="GothamBold"><h3><a href="{% url 'index' %}" >Home Page</a></h3></font>
 <br>
 <br>
 <br>

@@ -18,8 +18,8 @@ def firebase_img(a):
     db = firebase.database()
     storage = firebase.storage()
 
-    data = {"text": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),"name": a}
-    db.child("plant").push(data)
+    #data = {"text": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),"name": a}
+    #db.child("plant").push(data)
+    print(a)
 
-
-    storage.child("plant/example.jpg").put("a")
+    storage.child("plant/"+a).put("/media/arkochatterjee/MISC/GitHub/Green-Sense-VIT/green-sense/greensense_frontend/media/"+a)

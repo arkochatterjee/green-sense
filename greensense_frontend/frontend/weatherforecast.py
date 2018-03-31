@@ -13,7 +13,7 @@ def forecast5(city):
     humidity=json_data["list"][0]["main"]["humidity"]
     description=json_data["list"][0]["weather"][0]["description"]
 
-    out=str(temp)+"| "+str(pressure)+"| "+str(humidity)+"|"+str(description)
+    out=str(temp)+" | "+str(pressure)+" | "+str(humidity)+" |   "+str(description)
     return out
 
 #print(a)
