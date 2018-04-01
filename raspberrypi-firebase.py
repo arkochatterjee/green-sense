@@ -17,6 +17,7 @@ db = firebase.database()
 sdata=serial.Serial("/dev/ttyACM0",9600)
 sdata.baudrate=9600
 i = 1
+tim=""
 while i == 1:
     readdata=sdata.readline() 
     readdata=str(readdata)    ##readdata has the data
